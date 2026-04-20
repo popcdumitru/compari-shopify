@@ -93,7 +93,7 @@ const server = http.createServer(async (req, res) => {
 
         const htmlCode = await trustedShop.prepare();
         const compariResult = await fireCompariRequest(htmlCode);
-console.log("Compari final response:", compariResult);
+
         return sendJson(res, 200, {
           success: true,
           compariStatus: compariResult.status
